@@ -9,7 +9,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Author URI:  https://github.com/bungakku/Mec-Docx-Converter
 
-Convert .docx documents to clean, semantic HTML – paste from Word, Google Docs, or LibreOffice without the mess.
+Convert .docx documents to clean, semantic HTML – paste from Word, Google Docs, or LibreOffice without easily.
 
 == Description ==
 
@@ -30,14 +30,6 @@ MEC‑DOCX‑CONVERTER is a WordPress plugin that transforms `.docx` files (from
 - **Hyperlinks** – internal/external, with target frame support.
 - **Checkboxes** – mapped to `<input type="checkbox">`.
 - **Symbols & dingbats** – automatically translated to Unicode equivalents (Symbol, Webdings, Wingdings).
-- **Style maps** – fully customisable (see below).
-
-**Advanced styling control with style maps:**
-
-You can embed a custom style map inside your `.docx` file using the [online embedding tool](https://mike.zwobble.org/projects/mec/embed-style-map/). This lets you map your own Word styles to specific HTML tags and classes.  
-Example:  
-`p[style-name='WarningHeading'] => h1.warning:fresh`  
-Learn more about writing style maps at: https://github.com/mwilliamson/mec.js#writing-style-maps.
 
 **Programmatic configuration:**
 
