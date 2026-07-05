@@ -97,5 +97,4 @@ Please use the GitHub issue tracker: https://github.com/bungakku/Mec-Docx-Conver
 == Credits ==
 
 Developed by Biswajit Thokchom.  
-Icons are inline SVGs created by the author.  
 No external libraries or assets are used.
