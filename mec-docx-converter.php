@@ -3,7 +3,7 @@
  * Plugin Name: MEC DOCX CONVERTER
  * Plugin URI:  https://github.com/bungakku/Mec-Docx-Converter
  * Description: Converts semantically marked up .docx documents to clean HTML for pasting from Word, Google Docs, etc.
- * Version:     1.0.0
+ * Version:     1.1.0
  * Author:      Biswajit
  * Author URI:  https://github.com/bungakku
  * License:     BSD 2-clause
@@ -47,7 +47,7 @@ function mec_docx_admin_assets( $hook ) {
         'mec-docx-style',
         plugin_dir_url( __FILE__ ) . 'mec-docx.css',
         array(),
-        '1.0.0'
+        '1.1.0'
     );
 }
 
@@ -115,7 +115,7 @@ function mec_docx_load_scripts() {
         'mec-docx-editor',
         plugin_dir_url( __FILE__ ) . 'mec-docx-editor.js',
         array( 'jquery' ),
-        '1.0.0',
+        '1.1.0',
         true
     );
 
@@ -123,7 +123,7 @@ function mec_docx_load_scripts() {
         'mec-docx-tabs',
         plugin_dir_url( __FILE__ ) . 'mec-docx-tabs.js',
         array(),
-        '1.0.0',
+        '1.1.0',
         true
     );
 }
@@ -147,7 +147,7 @@ function mec_docx_check_for_update( $transient ) {
         require_once ABSPATH . 'wp-admin/includes/plugin.php';
     }
     $this_plugin_data = get_plugin_data( __FILE__, false, false );
-    $current_version  = $this_plugin_data['Version'] ?? '1.0.0';
+    $current_version  = $this_plugin_data['Version'] ?? '1.1.0';
 
     // Get the latest release info from GitHub API (cached for 12 hours).
     $release = get_transient( 'mec_docx_github_release' );
@@ -166,8 +166,8 @@ function mec_docx_check_for_update( $transient ) {
         set_transient( 'mec_docx_github_release', $release, 12 * HOUR_IN_SECONDS );
     }
 
-    $latest_version = ltrim( $release['tag_name'], 'v' ); // Remove 'v' prefix if present
-    $download_url = $release['zipball_url'] ?? ''; // GitHub provides a zipball URL
+    $latest_version = ltrim( $release['tag_name'], 'v' );
+    $download_url = $release['zipball_url'] ?? '';
 
     if ( version_compare( $latest_version, $current_version, '>' ) ) {
         $transient->response[ $plugin_slug ] = (object) array(
