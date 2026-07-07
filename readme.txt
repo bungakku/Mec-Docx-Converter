@@ -4,7 +4,7 @@ Contributors: Biswajit Thokchom
 Tags: docx, html, word, office, paste, converter, mec
 Requires at least: 5.0
 Tested up to: 6.9.4
-Stable tag: 1.1.0
+Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Author URL:  https://github.com/bungakku
@@ -90,6 +90,11 @@ Please use the [GitHub issue tracker](https://github.com/bungakku/Mec-Docx-Conve
 
 == Changelog ==
 
+
+= v1.1.1 =
+Maintenance release.
+* Fixed internal version-string drift: the plugin header correctly read 1.1.0, but four other version references (the admin CSS enqueue cache-bust parameter, both JS enqueue cache-bust parameters, and the GitHub updater's fallback default) had been left at 1.1.1 from an internal build and were never brought back down to match. All version strings are now consistent at 1.1.1.
+* No functional or output changes to the conversion engine itself; this release only corrects asset cache-busting and update-check metadata.
 
 = v1.1.0 =
 Layout-fidelity release.
